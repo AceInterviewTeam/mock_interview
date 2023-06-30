@@ -25,7 +25,7 @@ const Session = () => {
         <ActionButton
           onClickHandler={session ? handleRetryQuestion : () => navigate('/')}
           variant="primary"
-          label={session ? 'Try question again' : '开始新的面试'}
+          label={session ? '重新开始' : '开始新的面试'}
         />
       </div>
       <DialogueInput
