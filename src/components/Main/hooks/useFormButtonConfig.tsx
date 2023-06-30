@@ -21,7 +21,7 @@ const useFormButtonConfig = () => {
     id: 1,
     onClickHandler: handleValidateForm,
     variant: 'primary',
-    label: 'Start Interview',
+    label: '开始面试',
     shouldRender: !isValid,
   };
 
@@ -29,7 +29,7 @@ const useFormButtonConfig = () => {
     id: 2,
     onClickHandler: handleSubmitForm,
     variant: 'primary',
-    label: isLoading ? <img src={spinner} alt='loading' className='mx-8'/> : 'Submit Answer',
+    label: isLoading ? <img src={spinner} alt='loading' className='mx-8'/> : '提交答案',
     disabled: isLoading || isEditing || !isFormReadyToSubmit,
     shouldRender: isValid && isFormReadyToSubmit,
   };
@@ -38,7 +38,7 @@ const useFormButtonConfig = () => {
     id: 3,
     onClickHandler: isRecording ? stopSpeechRecognition : startSpeechRecognition,
     variant: 'primary',
-    label: isRecording ? 'Stop Recording' : 'Start Recording Answer',
+    label: isRecording ? '停止录音' : '开始录制答案',
     tooltipContent: mediaDeviceErr,
     setTooltipContent: setMediaDeviceErr,
     className: isRecording ? 'animate-fade-in-out' : '',
@@ -50,7 +50,7 @@ const useFormButtonConfig = () => {
     id: 4,
     onClickHandler: isEditing ? handleSaveEdit : handleEditMode,
     variant: 'secondary',
-    label: isEditing ? 'Save' : 'Edit',
+    label: isEditing ? '保存' : '编辑',
     disabled: isRecording || isLoading,
     shouldRender: isValid,
   };
@@ -59,7 +59,7 @@ const useFormButtonConfig = () => {
     id: 5,
     onClickHandler: handleCancelEdit,
     variant: 'secondary',
-    label: 'Cancel',
+    label: '取消',
     shouldRender: isValid && isEditing,
   };
 
@@ -67,7 +67,7 @@ const useFormButtonConfig = () => {
     id: 6,
     onClickHandler: handleGetQuestion,
     variant: 'secondary',
-    label: 'Change question',
+    label: '更换问题',
     className: 'absolute right-0 md:static',
     disabled: isRecording || isEditing || isLoading,
     shouldRender: isValid,

@@ -2,7 +2,7 @@ import type { Reducer } from 'react';
 import type { State, Action } from '@@types/form';
 
 const initialResponse =
-  'Before we start, tell me more about yourself by filling out the options above. Your OpenAI key wont be required until you submit your answer so feel free to start the interview!';
+  '在我们开始之前，请填写上面的选项，告诉我更多关于您自己的信息。 在您提交答案之前，不会需要您的 OpenAI 密钥，所以请随意开始面试！';
 
 export const initialState = {
   formValues: {

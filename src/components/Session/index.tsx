@@ -25,7 +25,7 @@ const Session = () => {
         <ActionButton
           onClickHandler={session ? handleRetryQuestion : () => navigate('/')}
           variant="primary"
-          label={session ? 'Try question again' : 'Start new interview'}
+          label={session ? 'Try question again' : '开始新的面试'}
         />
       </div>
       <DialogueInput
@@ -33,7 +33,7 @@ const Session = () => {
         transcript={
           session
             ? `Question: \n\n ${session.question} \n\n Response: \n\n ${session.response}`
-            : `Couldn't find your session history. Try Starting a new Interview.`
+            : `找不到你的面试记录,请重新开始面试.`
         }
       />
     </MainLayout>

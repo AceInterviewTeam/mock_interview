@@ -12,14 +12,17 @@ export type Options = {
 
 export const options: Options = {
   field: {
-    fe: 'Front-end',
-    be: 'Back-end',
-    fullstack: 'Fullstack',
+    fe: '前端',
+    be: '后端',
+    fullstack: '全栈',
+    pm:'产品',
+    al:'算法',
+
   },
   experience: {
-    starter: 'In school / Studying',
-    junior: 'Junior',
-    senior: 'Senior',
+    starter: '校招/实习',
+    junior: '初级',
+    senior: '高级',
   },
   lang: {
     'en-US': 'English',
@@ -39,30 +42,30 @@ export const options: Options = {
 export const INTERVIEW_OPTIONS = [
   {
     id: 1,
-    label: 'Development Field',
+    label: '专业领域',
     name: 'field',
     type: 'dropdown',
     options: options.field,
     tooltipContent:
-      'Tech Interview GPT will ask questions relevant to your development field.',
+      '方便面将询问与您的专业领域相关的问题',
   },
   {
     id: 2,
-    label: 'Work Experience',
+    label: '工作经验',
     name: 'experience',
     type: 'dropdown',
     options: options.experience,
     tooltipContent:
-      'Tech Interview GPT will provide feedback and follow up questions based on your work experience.',
+      '方便面将根据您的工作经验提供反馈并跟进问题',
   },
   {
     id: 3,
-    label: 'Language',
+    label: '语言',
     name: 'lang',
     type: 'dropdown',
     options: options.lang,
     tooltipContent:
-      'Select the spoken language when converting speech to text.\n\nYou may type in your answer with the edit option.',
+      '方便面将根据你选择的语言进行问答',
   },
   {
     id: 4,
@@ -70,6 +73,6 @@ export const INTERVIEW_OPTIONS = [
     name: 'apiKey',
     type: 'input',
     tooltipContent:
-      'Click <a href="https://platform.openai.com/account/api-keys" target="_blank" rel="noopener noreferrer" style="color:#9FA6FC">here</a> to get your API key.\n\nDont have an OpenAI account? <a href="https://platform.openai.com/signup" target="_blank" rel="noopener noreferrer" style="color:#9FA6FC">Create</a> a new account and get free trial tokens.\n\nNOTE :\n- Your API key will only be required when submitting your interview answer so feel free to try out the interview first.\n\n- API keys are not used or stored and are only used for feedback requests.',
+      '输入OpenAI API Key',
   },
 ];

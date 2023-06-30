@@ -2,9 +2,9 @@ import { AxiosError } from 'axios';
 
 // interview options
 export const optionsErrMap = {
-  field: 'Development Field',
-  experience: 'Work Experience',
-  lang: 'Language',
+  field: '专业领域',
+  experience: '工作经验',
+  lang: '语言',
 };
 
 // speech recognition

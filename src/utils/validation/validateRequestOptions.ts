@@ -13,7 +13,7 @@ export const validateRequestOptions = (searchParams: URLSearchParams) => {
   });
   
   if (errors.length > 0) {
-    const errorMessage = `Before we start, fill out the following options : ${errors.join(
+    const errorMessage = `开始面试前请提供以下信息: ${errors.join(
       ', '
     )}`;
     throw new Error(errorMessage);
