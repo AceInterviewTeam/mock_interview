@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import Loader from '@components/common/Loader';
 import { loaderElements } from '@components/common/Loader/constants';
 import Flicker from '@assets/Main/flicker.svg';
-import ChatGPT from '@assets/Main/ChatGPT.svg';
+import ChatGPT from '@assets/Main/icon.jpg';
 import { useFormSelector } from '@store/formContext';
 import useIncrementTimeout from '../hooks/useIncrementTimeout';
 import useTypingEffect from '../hooks/useTypingEffect';
