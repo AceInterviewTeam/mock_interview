@@ -4,7 +4,7 @@ import MainLayout from '@components/common/Layout/Main';
 import DialogueInput from '@components/common/DialogueInput';
 import ActionButton from '@components/common/Button';
 import user from '@assets/Main/user.svg';
-import chatGPT from '@assets/Main/ChatGPT.svg';
+import chatGPT from '@assets/Main/icon.jpg';
 import useForm from '@hooks/useForm';
 import useSession from '@hooks/useSession';
 
