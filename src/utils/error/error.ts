@@ -11,15 +11,15 @@ export const optionsErrMap = {
 export const speechRecognitionErrMap = {
   userMedia: {
     NotAllowedError:
-      'Please enable microphone access in your browser settings or continue by typing your answer.',
+      '请在浏览器设置中启用麦克风访问权限或输入您的答案继续',
     NotFoundError:
-      'Dont have a microphone? Try submitting your answer by clicking "Edit".',
-    NotReadableError: `Your audio device currently isn't producing a usable signal and is currently not available. Please check your device or try submitting your answer by clicking "Edit".`,
+      '没有麦克风？ 尝试点击“编辑”提交您的答案',
+    NotReadableError: `您的音频设备当前未产生可用信号并且当前不可用。 请检查您的设备或尝试通过单击“编辑”提交您的答案。`,
   },
   unsupported:
-    'Speech Recognition is not supported in this browser. Try submitting your answer by clicking "Edit".',
+    '此浏览器不支持语音识别。 尝试通过单击“编辑”提交您的答案。',
   connection:
-    'Dont have a microphone? Try submitting your answer by clicking "Edit".',
+    '没有麦克风？ 尝试通过单击“编辑”提交您的答案。',
 };
 
 // axios
@@ -37,11 +37,11 @@ export const getAxiosError = (err: AxiosError) => {
   const httpStatus = err.response?.status ?? 0;
 
   if (!err.response) {
-    return `Please check your network connection : ${err.message}.`;
+    return `请检查你的网络连接 : ${err.message}.`;
   }
   if (httpStatus in httpStatusErrMap) {
     return httpStatusErrMap[httpStatus as HttpStatus];
   } else {
-    return `[${err.message}]: Retry submitting your answer after a brief wait.`;
+    return `[${err.message}]: 请等待后重试提交您的答案。`;
   }
 };

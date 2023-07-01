@@ -15,7 +15,7 @@ export const generatePrompt = (
   field: string,
   experience: string,
   lang: string,
-  question: string,
+  // question: string,
   transcript: string
 ) => {
   console.log("******experience********",experience)
@@ -43,7 +43,6 @@ Ideally within 1 second each time the user changes their query or types a new wo
 
 5 to 10 suggestions
 
-3. If the user inputs "stop", "bye" this kind of words, terminate the interview.
 4. Do not repeat the interview.
 
 Here are the rules for the conversation:
@@ -51,7 +50,6 @@ Here are the rules for the conversation:
 * Speak in first person and converse directly with the candidate
 * Do not provide any backend context or narration. Remember this is a dialogue
 * Do NOT write the candidates's replies, only your own
-* 提问的方式最好由浅入深，同时不要重复问一个问题，当时候选人回答"不会"或者答错的时候换一个面试问题
 *Based on the response, provide the interviewee feedback with 3 seperate parts : 
 1. A list of what's good about the response. 
 2. A list of what could be done better about the response. 

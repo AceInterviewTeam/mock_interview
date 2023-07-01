@@ -9,12 +9,12 @@ interface CompletionApiProps extends Omit<FormValues, 'editedTranscript'> {
 const fetchOpenAICompletion = async ({
   searchParams,
   apiKey,
-  question,
+  // question,
   transcript,
 }: CompletionApiProps) => {
   const { field, experience, lang } = mapSearchParamToValue(searchParams);
 
-  const prompt = generatePrompt(field, experience, lang, question, transcript);
+  const prompt = generatePrompt(field, experience, lang, transcript);
   const options = {
     model: 'gpt-3.5-turbo-0613',
     messages: [{ role: "user", content: prompt }],
